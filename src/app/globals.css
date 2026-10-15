@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 144 40% 98%;
+    --foreground: 160 30% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 160 30% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 160 30% 10%;
+    --primary: 154 40% 29%;
+    --primary-foreground: 144 40% 98%;
+    --secondary: 151 43% 52%;
+    --secondary-foreground: 144 40% 98%;
+    --muted: 144 20% 90%;
+    --muted-foreground: 160 10% 40%;
+    --accent: 151 43% 90%;
+    --accent-foreground: 154 40% 29%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 154 20% 85%;
+    --input: 154 20% 85%;
+    --ring: 154 40% 29%;
+    --radius: 1rem;
+    --sidebar-background: 160 23% 14%;
+    --sidebar-foreground: 144 40% 95%;
+    --sidebar-primary: 154 40% 29%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 160 23% 20%;
+    --sidebar-accent-foreground: 151 43% 52%;
+    --sidebar-border: 160 23% 18%;
+    --sidebar-ring: 154 40% 29%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-headline;
+  }
+}
+
+.aqi-card {
+  @apply transition-all duration-300 hover:shadow-lg rounded-2xl border border-border/50;
+}
+
+.btn-primary {
+  @apply bg-primary text-primary-foreground hover:bg-primary/90 rounded-xl px-4 py-2 font-medium transition-colors;
+}
+
+.btn-secondary {
+  @apply bg-secondary text-secondary-foreground hover:bg-secondary/90 rounded-xl px-4 py-2 font-medium transition-colors;
+}
